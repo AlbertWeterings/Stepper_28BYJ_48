@@ -21,9 +21,6 @@ public:
 
 	Stepper_28BYJ_48(int pin_1n1, int pin_1n2, int pin_1n3, int pin_1n4);
     int motorSpeed = 1200;  //variable to set stepper speed
-	if ( CustomMotorSpeed != motorSpeed ){
-		motorSpeed = CustomMotorSpeed;
-	}
     void step(int);
    
 
