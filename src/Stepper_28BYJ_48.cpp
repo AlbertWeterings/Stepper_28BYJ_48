@@ -2,7 +2,7 @@
 
 
 
-Stepper_28BYJ_48::Stepper_28BYJ_48(int _pin_1n1, int _pin_1n2, int _pin_1n3, int _pin_1n4) {
+Stepper_28BYJ_48::Stepper_28BYJ_48(int _pin_1n1, int _pin_1n2, int _pin_1n3, int _pin_1n4, int CustomMotorSpeed) {
   
   pin_1n1 = _pin_1n1;
   pin_1n2 = _pin_1n2;
@@ -10,13 +10,10 @@ Stepper_28BYJ_48::Stepper_28BYJ_48(int _pin_1n1, int _pin_1n2, int _pin_1n3, int
   pin_1n4 = _pin_1n4;
 
   pinMode(pin_1n1, OUTPUT);
-  pinMode(pin_1n2 , OUTPUT);
+  pinMode(pin_1n2, OUTPUT);
   pinMode(pin_1n3, OUTPUT);
   pinMode(pin_1n4, OUTPUT);
-	if ( CustomMotorSpeed != motorSpeed ){
-		motorSpeed = CustomMotorSpeed;
-	}
-
+  motorSpeed = CustomMotorSpeed;
 };
 
 void Stepper_28BYJ_48::step( int count) {
